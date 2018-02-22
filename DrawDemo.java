@@ -85,4 +85,18 @@ public class DrawDemo
     {
         myCanvas.erase();
     }
+    
+    /**
+     * Dibujar un triángulo en esta posición
+     */
+    public void drawTriangle(int xPos, int yPos)
+    {
+        Pen pen = new Pen(xPos, yPos, myCanvas);
+        pen.setColor(Color.GREEN);
+        
+        for (int i = 0; i < 3; i++){
+            pen.move(200);
+            pen.turn(120);
+        }
+    }
 }
