@@ -127,4 +127,18 @@ public class DrawDemo
             pen.turn(360/n);
         }
     }
+    
+    /** Dibujar una espiral
+     * 
+     */
+    public void drawSpiral()
+    {
+        Pen pen = new Pen(250, 200, myCanvas);
+        pen.setColor(Color.BLACK);
+        
+        for (int i = 2; i < 50; i++) {
+            pen.move(i * 4);
+            pen.turn(90);
+        }
+    }
 }
