@@ -99,6 +99,7 @@ public class DrawDemo
             pen.turn(120);
         }
     }
+    
     /**
      * Dibujar un pentágono
      */
@@ -110,6 +111,20 @@ public class DrawDemo
         for (int i = 0; i < 5; i++) {
             pen.move(100);
             pen.turn(360/5);
+        }
+    }
+    
+    /**
+     * Dibujar un polígono regular
+     */
+    public void DrawPolygon(int n)
+    {
+        Pen pen = new Pen(200,100, myCanvas);
+        pen.setColor(Color.GREEN);
+        
+        for(int i = 0; i < n; i++) {
+            pen.move(50);
+            pen.turn(360/n);
         }
     }
 }
